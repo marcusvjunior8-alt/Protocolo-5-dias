@@ -398,26 +398,72 @@ footer {
    8. RESPONSIVIDADE (CELULAR E TABLET)
    ========================================================== */
 @media (max-width: 850px) {
+
+    /* Ajuste do topo no celular */
+    .topo {
+        padding: 0 15px;
+        height: 70px;
+    }
+
+    .img img {
+        max-height: 45px;
+    }
+
+    .links a.btn-contato-topo {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    /* SOBRE NÓS / BANNER RESPONSIVO NO CELULAR */
+    .banner {
+        margin: 15px auto 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #1E3B18; /* Fundo escuro para dar contraste ao texto */
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .banner-conteudo {
+        position: static; /* Remove a posição absoluta que vazava o texto */
+        transform: none;
+        max-width: 100%;
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #7AC142;
+        text-shadow: none;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #FFFFFF;
+        text-shadow: none;
+    }
+
+    /* Grade de produtos no celular (2 por linha) */
     .produtos-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
-    .topo {
-        padding: 0 20px;
-        height: 75px;
+    /* FAQ no celular */
+    .faq-container h2 {
+        font-size: 24px;
     }
 
-    .banner-conteudo {
-        left: 25px;
-        right: 25px;
-    }
-
-    .banner-conteudo h1 {
-        font-size: 26px;
-    }
-
-    .banner-conteudo p {
-        font-size: 14px;
+    .faq-item h3 {
+        font-size: 16px;
     }
 }
