@@ -378,15 +378,15 @@ footer {
     background-color: #2C5E1A !important;
     color: #FFFFFF !important;
     width: 42px;
-    /* Largura fixa para deixar botões simétricos */
     height: 42px;
-    /* Altura fixa */
     border-radius: 8px;
     font-size: 20px;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     transition: all 0.3s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
 }
 
 .redes-sociais a:hover {
