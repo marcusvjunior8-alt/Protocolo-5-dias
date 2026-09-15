@@ -105,7 +105,8 @@ body {
     left: 40px;
     transform: translateY(-50%);
     max-width: 550px;
-    width: calc(100% - 80px); /* Garante margem de segurança */
+    width: calc(100% - 80px);
+    /* Garante margem de segurança */
     z-index: 2;
 }
 
@@ -363,20 +364,28 @@ footer {
     color: #7AC142 !important;
 }
 
+/* CONTAINER DAS REDES SOCIAIS (ALINHAMENTO EM LINHA) */
 .redes-sociais {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
+    /* Força os ícones ficarem lado a lado */
+    align-items: center !important;
+    /* Alinha verticalmente no centro */
     gap: 12px;
 }
 
 .redes-sociais a {
     background-color: #2C5E1A !important;
     color: #FFFFFF !important;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 42px;
+    /* Largura fixa para deixar botões simétricos */
+    height: 42px;
+    /* Altura fixa */
+    border-radius: 8px;
+    font-size: 20px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     transition: all 0.3s ease;
 }
 
@@ -421,7 +430,8 @@ footer {
         margin: 10px auto 0;
         display: flex;
         flex-direction: column;
-        background-color: #1E3B18; /* Fundo escuro integrado */
+        background-color: #1E3B18;
+        /* Fundo escuro integrado */
         border-radius: 12px;
     }
 
@@ -433,13 +443,15 @@ footer {
     }
 
     .banner-conteudo {
-        position: relative !important; /* Desativa a sobreposição */
+        position: relative !important;
+        /* Desativa a sobreposição */
         top: auto !important;
         left: auto !important;
         transform: none !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 24px 20px !important; /* Cria respiro interno */
+        padding: 24px 20px !important;
+        /* Cria respiro interno */
         box-sizing: border-box !important;
         text-align: center;
     }
@@ -456,7 +468,8 @@ footer {
         line-height: 1.6 !important;
         color: #FFFFFF;
         text-shadow: none !important;
-        word-wrap: break-word; /* Força a quebra perfeita das palavras */
+        word-wrap: break-word;
+        /* Força a quebra perfeita das palavras */
     }
 
     /* Produtos 2 colunas */
