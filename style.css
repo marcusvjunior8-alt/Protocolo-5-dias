@@ -39,11 +39,12 @@ body {
 
 .links {
     display: flex;
-    gap: 22px;
+    gap: 15px;
     align-items: center;
 }
 
-a {
+/* Links normais de navegação */
+.links a:not(.btn-contato-topo) {
     text-decoration: none;
     font-size: 16px;
     color: #4B8B2E;
@@ -53,10 +54,32 @@ a {
     transition: all 0.3s ease;
 }
 
-a:hover {
-    background-color: #7AC142;
-    color: #FFFFFF;
+.links a:not(.btn-contato-topo):hover {
+    background-color: #F0F7ED;
+    color: #4B8B2E;
     transform: translateY(-2px);
+}
+
+/* BOTÃO DE CONTATO DESTACADO NO TOPO */
+.links a.btn-contato-topo {
+    background-color: #7AC142 !important;
+    color: #FFFFFF !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(122, 193, 66, 0.3);
+}
+
+.links a.btn-contato-topo:hover {
+    background-color: #4B8B2E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 139, 46, 0.4);
 }
 
 /* ==========================================================

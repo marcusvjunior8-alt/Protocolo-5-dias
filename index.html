@@ -11,15 +11,19 @@
 </head>
 
 <body>
-    <div class="topo">
+    <!-- CABEÇALHO DA PÁGINA INICIAL -->
+    <header class="topo">
         <div class="img">
-            <img src="./imgs/logo.png" alt="Logo Protocolo 5 Dias">
+            <a href="./index.html"><img src="./imgs/logo.png" alt="Logo Protocolo 5 Dias"></a>
         </div>
-        <div class="links">
-            <a href="">Contato</a>
-            <a href="#faq">FAQ</a>
-        </div>
-    </div>
+        <nav class="links">
+            <!-- BOTÃO DIRETO PARA O WHATSAPP -->
+            <a href="https://api.whatsapp.com/send?phone=5579999999999&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Protocolo%205%20Dias."
+                target="_blank" rel="noopener noreferrer" class="btn-contato-topo">
+                <i class="fab fa-whatsapp"></i> Contato
+            </a>
+        </nav>
+    </header>
     <div class="banner" id="sobre-nos">
         <img src="./imgs/banner.jpg" alt="Banner Protocolo 5 Dias e Equilíbrio Mais">
         <div class="banner-conteudo">
@@ -71,7 +75,6 @@
                 <h3>Redes Sociais</h3>
                 <div id="redes-sociais" class="redes-sociais">
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>

@@ -1,32 +1,31 @@
-// AGUARDA O CARREGAMENTO COMPLETO DO DOM
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. LÓGICA DO FAQ (ACCORDION)
+    // 1. FUNCIONALIDADE DO FAQ ACCORDION
     const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Verifica se o item clicado já está aberto
-            const estaAtivo = item.classList.contains('ativo');
-            // Se não estava ativo, abre o clicado
-            if (!estaAtivo) {
-                item.classList.add('ativo');
-            }else{
-                item.classList.remove('ativo');
-            }
-        });
-    });
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const estaAtivo = item.classList.contains('ativo');
 
-    // 2. RENDERIZAÇÃO DOS PRODUTOS (CASO ESTEJA NA PÁGINA DE PRODUTOS)
+                // Fecha outros itens para manter limpo
+                faqItems.forEach(outroItem => outroItem.classList.remove('ativo'));
+
+                // Alterna o item clicado
+                if (!estaAtivo) {
+                    item.classList.add('ativo');
+                }
+            });
+        });
+    }
+
+    // 2. RENDERIZAÇÃO DE PRODUTOS (EXECUTADO APENAS SE A DIV EXISTIR)
     renderizarProdutos();
 });
 
-// FUNÇÃO PARA INJETAR OS CARDS NA GRADE
 function renderizarProdutos() {
     const container = document.getElementById('lista-produtos');
-    
-    // Se a div #lista-produtos não existir nesta página, ignora para não dar erro
-    if (!container) return;
+    if (!container) return; // Evita erro no index.html
 
     const produtos = [
         {
@@ -40,14 +39,14 @@ function renderizarProdutos() {
             imagem: "./imgs/equilibrio.png"
         },
         {
-            nome: "Bebida Protocolo 5 dias (500ml)",
+            nome: "Bebida Protocolo 5 Dias (500ml)",
             preco: "R$ 8,00",
             imagem: "./imgs/protocolo_5_dias.png"
         },
         {
             nome: "Kit 5 Bebidas Equilíbrio",
             preco: "R$ 35,00",
-            imagem: "./imgs/kit_equilibrio.png" 
+            imagem: "./imgs/kit_equilibrio.png"
         }
     ];
 
